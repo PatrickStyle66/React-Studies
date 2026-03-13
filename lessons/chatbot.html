@@ -25,18 +25,20 @@
         //const message = props.message;
         //const sender = props.sender;
         
-        if(sender === 'robot'){
+        /*if(sender === 'robot'){
           return(
             <div>
               <img src="images/robot.png" width="50" />
               {message}
             </div>
           );
-        }
+        }*/
+        
         return(
           <div>
+            {sender ==='robot' && <img src="images/robot.png" width="50" />}
             {message}
-            <img src="images/user.png" width="50" />
+            {sender ==='user' && <img src="images/user.png" width="50" />}
           </div>
         );
       }
